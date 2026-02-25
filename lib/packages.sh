@@ -1,7 +1,7 @@
 install_dependencies() {
     log_info "Installing dependencies..."
 
-    sudo pacman -S --needed --noconfirm \
+    sudo pacman -Sy --needed --noconfirm \
         git \
         base-devel \
         papirus-icon-theme \
