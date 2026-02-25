@@ -8,9 +8,7 @@ install_dependencies() {
         noto-fonts \
         noto-fonts-emoji \
         ttf-fira-code \
-        wl-clipboard \
-        pipewire \
-        networkmanager
+        wl-clipboard 
 
     log_info "Installing dependencies using paru (AUR)..."
     
