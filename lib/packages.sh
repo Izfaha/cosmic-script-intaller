@@ -1,5 +1,5 @@
 install_dependencies() {
-    log_info "Installing dependencies..."
+    log_info "Installing dependencies using pacman..."
 
     sudo pacman -Sy --needed --noconfirm \
         git \
@@ -8,8 +8,12 @@ install_dependencies() {
         noto-fonts \
         noto-fonts-emoji \
         ttf-fira-code \
-        eww \
         wl-clipboard \
         pipewire \
         networkmanager
+
+    log_info "Installing dependencies using paru (AUR)..."
+    
+    paru -Sy --needed --noconfirm \
+    eww
 }
