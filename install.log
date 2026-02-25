@@ -1,0 +1,98 @@
++ log_info =======================================
++ echo -e '\e[34m[INFO]\e[0m ======================================='
+[34m[INFO][0m =======================================
++ log_info ' COSMIC Tealinux Rice Installer v1.0.0'
++ echo -e '\e[34m[INFO]\e[0m  COSMIC Tealinux Rice Installer v1.0.0'
+[34m[INFO][0m  COSMIC Tealinux Rice Installer v1.0.0
++ log_info ' Log file: install.log'
++ echo -e '\e[34m[INFO]\e[0m  Log file: install.log'
+[34m[INFO][0m  Log file: install.log
++ log_info =======================================
++ echo -e '\e[34m[INFO]\e[0m ======================================='
+[34m[INFO][0m =======================================
++ [[ true = true ]]
++ log_warn 'Running in DRY RUN mode (no changes will be made)'
++ echo -e '\e[33m[WARN]\e[0m Running in DRY RUN mode (no changes will be made)'
+[33m[WARN][0m Running in DRY RUN mode (no changes will be made)
++ step 'System Checks'
++ log_step 'Step 1: System Checks'
++ echo -e '\n\e[35m===== Step 1: System Checks =====\e[0m'
+
+[35m===== Step 1: System Checks =====[0m
++ (( STEP++ ))
++ check_not_root
++ [[ 1000 -eq 0 ]]
++ check_arch_based
++ grep -qi arch /etc/os-release
++ log_success 'Arch-based system detected.'
++ echo -e '\e[32m[SUCCESS]\e[0m Arch-based system detected.'
+[32m[SUCCESS][0m Arch-based system detected.
++ check_internet
++ log_info 'Checking internet connection...'
++ echo -e '\e[34m[INFO]\e[0m Checking internet connection...'
+[34m[INFO][0m Checking internet connection...
++ ping -c 1 archlinux.org
++ log_success 'Internet connection OK.'
++ echo -e '\e[32m[SUCCESS]\e[0m Internet connection OK.'
+[32m[SUCCESS][0m Internet connection OK.
++ detect_session_type
++ SESSION_TYPE=wayland
++ log_info 'Session type detected: wayland'
++ echo -e '\e[34m[INFO]\e[0m Session type detected: wayland'
+[34m[INFO][0m Session type detected: wayland
++ detect_vm
++ systemd-detect-virt --quiet
++ log_info 'Running on bare metal.'
++ echo -e '\e[34m[INFO]\e[0m Running on bare metal.'
+[34m[INFO][0m Running on bare metal.
++ step 'Installing Base Dependencies'
++ log_step 'Step 2: Installing Base Dependencies'
++ echo -e '\n\e[35m===== Step 2: Installing Base Dependencies =====\e[0m'
+
+[35m===== Step 2: Installing Base Dependencies =====[0m
++ (( STEP++ ))
++ [[ true = false ]]
++ step 'Installing COSMIC Desktop'
++ log_step 'Step 3: Installing COSMIC Desktop'
++ echo -e '\n\e[35m===== Step 3: Installing COSMIC Desktop =====\e[0m'
+
+[35m===== Step 3: Installing COSMIC Desktop =====[0m
++ (( STEP++ ))
++ [[ true = false ]]
++ step 'Enabling Display Manager'
++ log_step 'Step 4: Enabling Display Manager'
++ echo -e '\n\e[35m===== Step 4: Enabling Display Manager =====\e[0m'
+
+[35m===== Step 4: Enabling Display Manager =====[0m
++ (( STEP++ ))
++ [[ true = false ]]
++ step 'Setting Default Session'
++ log_step 'Step 5: Setting Default Session'
++ echo -e '\n\e[35m===== Step 5: Setting Default Session =====\e[0m'
+
+[35m===== Step 5: Setting Default Session =====[0m
++ (( STEP++ ))
++ [[ true = false ]]
++ step 'Applying Theme & Icons'
++ log_step 'Step 6: Applying Theme & Icons'
++ echo -e '\n\e[35m===== Step 6: Applying Theme & Icons =====\e[0m'
+
+[35m===== Step 6: Applying Theme & Icons =====[0m
++ (( STEP++ ))
++ [[ true = false ]]
++ step 'Setting Up Widgets'
++ log_step 'Step 7: Setting Up Widgets'
++ echo -e '\n\e[35m===== Step 7: Setting Up Widgets =====\e[0m'
+
+[35m===== Step 7: Setting Up Widgets =====[0m
++ (( STEP++ ))
++ [[ true = false ]]
+++ date +%s
++ END_TIME=1772007352
++ DURATION=0
++ log_success 'Installation completed in 0s'
++ echo -e '\e[32m[SUCCESS]\e[0m Installation completed in 0s'
+[32m[SUCCESS][0m Installation completed in 0s
++ log_info 'Please reboot and select COSMIC session.'
++ echo -e '\e[34m[INFO]\e[0m Please reboot and select COSMIC session.'
+[34m[INFO][0m Please reboot and select COSMIC session.
